@@ -30,7 +30,7 @@ ADMINS = (
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
-ALLOWED_HOSTS = ['217.67.229.228','localhost']
+ALLOWED_HOSTS = ['217.67.229.228','localhost','salesforce-package-xml-builder.herokuapp.com']
 
 
 # Application definition
@@ -43,6 +43,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'buildpackage',
     'widget_tweaks',
+    herokuapp
 )
 
 MIDDLEWARE_CLASSES = (
