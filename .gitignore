@@ -4,5 +4,5 @@ staticfiles
 .idea
 .env
 django_env
-.db
-.log
+*.db
+*.log
