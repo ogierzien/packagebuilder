@@ -25,12 +25,12 @@ TEMPLATE_DEBUG = DEBUG
 THUMBNAIL_DEBUG = DEBUG
 
 ADMINS = (
-    ('Ben Edwards', 'ben@edwards.nz'),
+    ('Ogier Schelvis', 'ogier@zien24.nl'),
 )
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['217.67.229.228','localhost']
 
 
 # Application definition
