@@ -205,10 +205,11 @@ def package(request, package_id):
 
     package = get_object_or_404(Package, random_id = package_id)
     package_xml = package.package
-    xml = etree.tostring(package_xml.encode('utf-8'));
-    package_xml = etree.tostring(xml, pretty_print=True)
     package.delete()
-    return render_to_response('package.html', RequestContext(request, {'package_xml': package_xml}), content_type="text/xml; charset=UTF-8")
+    response = render_to_response('package.html', RequestContext(request, {'package_xml': package_xml}), content_type="text/xml; charset=UTF-8");
+    etree.fromstring(response.content)
+    response.content = etree.tostring(response.content, pretty_print=True)
+    return response;
 
 
 def logout(request):
