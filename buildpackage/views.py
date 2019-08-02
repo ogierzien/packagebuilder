@@ -208,8 +208,7 @@ def package(request, package_id):
     package.delete()
     response = render_to_response('package.html', RequestContext(request, {'package_xml': package_xml}), content_type="text/xml; charset=UTF-8");
     et = etree.fromstring(response.content)
-    pprint(etree.tostring(et, pretty_print=True));
-    return response;
+    return print(etree.tostring(et, pretty_print=True));
 
 
 def logout(request):
