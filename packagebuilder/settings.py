@@ -81,7 +81,7 @@ BROKER_POOL_LIMIT = 1
 
 LANGUAGE_CODE = 'en-gb'
 
-TIME_ZONE = 'Europe/London'
+TIME_ZONE = 'Europe/Amsterdam'
 
 USE_I18N = True
 
