@@ -205,7 +205,8 @@ def package(request, package_id):
 
     package = get_object_or_404(Package, random_id = package_id)
     package_xml = package.package
-    package_xml = etree.tostring(package_xml, pretty_print=True)
+    xml = etree.fromstring(package_xml);
+    package_xml = etree.tostring(xml, pretty_print=True)
     package.delete()
     return render_to_response('package.html', RequestContext(request, {'package_xml': package_xml}), content_type="text/xml; charset=UTF-8")
 
